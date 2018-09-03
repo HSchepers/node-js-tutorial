@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <% include partials/nav.ejs %>
+  <h1><label for="video">What video do you want to watch?</label></h1>
+  <form id="Video">
+    <input type="text" name="video" value="<%= query.video %>">
+    <input type="submit" value="Watch it!">
+  </form>
+  <div style="position:relative;height:0;padding-bottom:56.25%">
+    <iframe src="https://www.youtube.com/embed/<%= query.video %>?ecver=2"
+    style="position:absolute;width:80%;height:80%;left:0" width="640"
+    height="360" frameborder="0" allow="autoplay; encrypted-media"
+    allowfullscreen></iframe>
+  </div>
+</body>
+</html>

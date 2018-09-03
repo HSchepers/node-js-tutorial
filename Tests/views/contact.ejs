@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <% include partials/nav.ejs %>
+  <h1>Contact us!</h1>
+  <p>Only if you want to of course...</p>
+
+  <form id="contact_form" method="POST" action="/contact">
+    <table align="center">
+      <tr>
+        <td><label for="name">Who do you want to contact?</label></td>
+        <td><input type="text" name="name" value="<%= query.name %>"></td>
+      </tr><tr>
+        <td><label for="loc">Where is he/she from?</label></td>
+        <td><input type="text" name="loc" value="<%= query.loc %>"></td>
+      </tr><tr>
+        <td><label for="mail">What&apos;s your e-mail?</label></td>
+        <td><input type="text" name="mail" value=""></td>
+      </tr><tr>
+        <td><input type="submit" value="submit"></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
