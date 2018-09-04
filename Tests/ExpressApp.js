@@ -23,6 +23,9 @@ app.get('/', function(req, res){
 app.get('/home', function(req, res){
   res.render('index');
 });
+app.get('/favicon.ico', function(req, res){
+  res.sendFile(__dirname + '/assets/favicon.ico');
+});
 
 //Forwarding the name to a template
 app.get('/profile/:name', function(req, res){
